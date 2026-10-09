@@ -1,0 +1,55 @@
+{
+  "as_of": "2026-10-08",
+  "entries": [
+    {
+      "path": "bridge/bridge_core.py",
+      "sha256": "1239223b39628b77f609a403772fb35719b85def702cae0eb0b2044edb3bb737",
+      "origin": "S6 local source, unchanged"
+    },
+    {
+      "path": "bridge/bridge_service.py",
+      "sha256": "6db1dd40fa4873e28e09fa0d807dc349e2427e39edb69e98d75673b76d035ee5",
+      "origin": "S6 local source, unchanged"
+    },
+    {
+      "path": "bridge/safe_files.py",
+      "sha256": "c48e027d23ab69e68ad254620b6f701e3dd90ab7e65c958c9c94b69a1cfd4b8e",
+      "origin": "S6 local source, unchanged"
+    },
+    {
+      "path": "bridge/bulk_analyze_client.py",
+      "sha256": "ee46c4fc4405b2100a93d296cbfca6f8d45468288c4a9130b73d1bfd8e08d2bc",
+      "origin": "S6 local source, unchanged"
+    },
+    {
+      "path": "bridge/fake_agy.py",
+      "sha256": "a5c8b8a92ab1fd945fafc6a8809ab3560417fbbb16e0ea89c9330ab6b1febc88",
+      "origin": "S6 local source, unchanged"
+    },
+    {
+      "path": "bridge/test_bridge.py",
+      "sha256": "d814d37b1882a84e87f3ea016f49d2d69e632e293919559f47418729e6cb8c4b",
+      "origin": "S6 local source, unchanged"
+    },
+    {
+      "path": "bridge/replay.py",
+      "sha256": "923cc1268472c60e8a35fe558e1e0374891f2f86b4860fbec529ca0232836eff",
+      "origin": "S6 local source, unchanged"
+    },
+    {
+      "path": "bridge/plugin.yaml",
+      "sha256": "6408310805b900af44b66962ca568fa41915f4c97630899dbca30362f78d8047",
+      "origin": "S6 local source, unchanged"
+    },
+    {
+      "path": "bridge/__init__.py",
+      "sha256": "0d4e54aa20cc863ff56f67e373b6391513be73dd43e88442e573fc65f5bb2d4f",
+      "origin": "S6 local source with verified JSON-string result transformation"
+    },
+    {
+      "path": "bridge/test_result_contract.py",
+      "sha256": "037ff8b52464572f88c982cd8c59361f3e04781851180e15a2b0e54a9c324bac",
+      "origin": "new offline regression for this repository; no installed Hermes dependency"
+    }
+  ]
+}

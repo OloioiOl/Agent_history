@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-08",
+  "scope": "small follow-up edits requested by the project owner after the second review",
+  "editor": "AI reviewer (S7), at owner's request",
+  "runtime_source_changed": false,
+  "changes": [
+    {
+      "file": "docs/02-architecture.md",
+      "what": "replaced the real service account name with a generic phrase"
+    },
+    {
+      "file": "docs/04-validation.md",
+      "what": "added reviewer-supplied command, Python 3.10.12, source-hash match; full log still not provided"
+    },
+    {
+      "file": "evidence/external-review.json",
+      "what": "same details as structured fields; missing_evidence narrowed to full output"
+    },
+    {
+      "file": "docs/10-threat-model.md",
+      "what": "added T9 (agy CLI update drift) and a matching follow-up check"
+    },
+    {
+      "file": "README.md",
+      "what": "added one-line English summary"
+    }
+  ],
+  "sha256_after": {
+    "README.md": "f3322efd9328f14c8976d78ec1f1fd1f0384050ca4c2f8de9362ab6dd89e6f08",
+    "docs/02-architecture.md": "068cf3f10aed844de8499dcb7013e6e57c2c7cec3548caf716abc03ce139cd5a",
+    "docs/04-validation.md": "4a1d18958b0f6ad9008374b7abe5522f470037d5f75e4ba893a53dec7fb611a3",
+    "docs/10-threat-model.md": "26b79bc43f0f827efb33110427164049caeee79fc2e6cc59e2fa5ccedd079aee",
+    "evidence/external-review.json": "7f8f9e1aabf1e1a536f93b80c5cfa77c3a53fc807e3e127f89be3a2bca46931f"
+  },
+  "not_changed": [
+    "bridge/ sources (manifest hashes still match)",
+    "examples/",
+    "docs/05 doctest note (materials still not added to this repository)"
+  ],
+  "not_executed": [
+    "unit tests",
+    "server commands",
+    "model calls"
+  ]
+}

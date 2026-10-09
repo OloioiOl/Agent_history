@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-08",
+  "scope": "documentation and illustrative configuration review",
+  "runtime_source_changed": false,
+  "existing_manifest_entries_verified": 10,
+  "historical_local_checks_preserved": true,
+  "checks": {
+    "relative_links_and_explicit_anchors": 32,
+    "json_examples": "parsed; keys matched to source",
+    "socket_path_mapping": "consistent across host/container/service example",
+    "systemd_unit": "compared against preserved unit with only declared substitutions",
+    "publication_pattern_scan": {
+      "patterns": [
+        "private_key",
+        "personal_windows_path",
+        "ipv4_literal",
+        "github_token",
+        "provider_key",
+        "discord_snowflake",
+        "original_account_path"
+      ],
+      "hits": []
+    }
+  },
+  "example_sha256": {
+    "examples/agy-bridge.service.example": "1208905c1676442fd955068acb699699872e214088228aa125888ad8033a344e",
+    "examples/client.example.json": "65d0e876bf87c70438d3d14e168b192cac077ffc2268cb479f20d3d07ae20f52",
+    "examples/config.example.json": "017bd278e5faad4ec6e319eaa70fe90ccf8f00cf460bcfdfe10063a714def310",
+    "examples/README.md": "d04a0bb0c1dcb5b9dc18250c9f1631d6131217b8e573cc7aa94891f6f2f0a927"
+  },
+  "unit_tests_rerun": false,
+  "reason": "runtime and test sources unchanged; original test results retained",
+  "not_executed": [
+    "Linux systemd-analyze verify",
+    "example deployment",
+    "server commands",
+    "real model calls",
+    "reviewer Linux test reproduction"
+  ],
+  "changed_or_added_files": [
+    "README.md",
+    "docs/03-incidents.md",
+    "docs/04-validation.md",
+    "docs/05-next-validation.md",
+    "docs/06-provenance.md",
+    "docs/07-publication.md",
+    "docs/08-decisions.md",
+    "docs/10-threat-model.md",
+    "evidence/external-review.json",
+    "examples/README.md",
+    "examples/agy-bridge.service.example",
+    "examples/client.example.json",
+    "examples/config.example.json"
+  ],
+  "caveat": "Static checks and bounded pattern scan do not prove full security or deployed correctness"
+}

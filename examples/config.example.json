@@ -1,0 +1,9 @@
+{
+  "socket": "/run/agy-bridge-host/socketdir/bridge.sock",
+  "results": "/var/lib/agy-bridge/results",
+  "agy": "/home/bridge-worker/.local/bin/agy",
+  "allowed_uids": [
+    11000
+  ],
+  "timeout_seconds": 630
+}

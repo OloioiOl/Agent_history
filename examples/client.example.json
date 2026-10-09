@@ -1,0 +1,6 @@
+{
+  "socket": "/opt/data/run/agy-bridge/bridge.sock",
+  "roots": {
+    "inbox": "/opt/data/bulk-inbox"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "as_of": "2026-10-08",
+  "timezone": "Asia/Seoul",
+  "kind": "curated summary; not raw telemetry",
+  "items": [
+    {
+      "id": "initial-relay",
+      "source": "S1",
+      "status": "user_report",
+      "claim": "Repeated LLM mediation used unnecessary tokens and changed data",
+      "quantified": false
+    },
+    {
+      "id": "actual-16kb",
+      "source": "S4",
+      "status": "recorded_pass",
+      "input_bytes": 16384,
+      "lines": 232,
+      "version": "schema-r3",
+      "scope": "analysis and exact quotation; not semantic approval"
+    },
+    {
+      "id": "actual-157kb",
+      "source": "S4",
+      "status": "failed",
+      "input_bytes": 157547,
+      "version": "stage-r2",
+      "actual_rerun_after_fix": false
+    },
+    {
+      "id": "dict-contract",
+      "source": "S5",
+      "status": "observed_failure_then_fixed",
+      "error_type": "tool_result_contract",
+      "result_type": "dict",
+      "fix": "JSON string at handler boundary"
+    },
+    {
+      "id": "installed-dispatcher",
+      "source": "S5",
+      "status": "pass",
+      "response": {
+        "ok": false,
+        "error": "PATH_DENIED"
+      },
+      "socket_connections": 0,
+      "agy_calls": 0
+    },
+    {
+      "id": "discord-denial",
+      "source": "S5",
+      "status": "pass",
+      "local_time": "2026-10-08 13:44",
+      "response": {
+        "ok": false,
+        "error": "PATH_DENIED"
+      },
+      "scope": "live Discord negative path; no successful analysis claim"
+    },
+    {
+      "id": "boot-setting",
+      "source": "S5",
+      "status": "enabled_and_active",
+      "reboot_tested": false
+    },
+    {
+      "id": "representative-document",
+      "source": "S5",
+      "status": "not_run"
+    },
+    {
+      "id": "discord-content-preservation",
+      "source": "S5",
+      "status": "not_run"
+    }
+  ]
+}

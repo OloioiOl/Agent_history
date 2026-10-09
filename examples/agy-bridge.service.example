@@ -1,0 +1,39 @@
+# Illustrative path/identity substitutions of the recorded unit; not installed.
+# Read examples/README.md before adapting. Directory and UID setup is external.
+[Unit]
+Description=Bounded agy analysis bridge for Hermes (example)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=bridge-worker
+Group=bridge-worker
+Environment=HOME=/home/bridge-worker
+Environment=PATH=/home/bridge-worker/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONDONTWRITEBYTECODE=1
+UMask=0077
+WorkingDirectory=/var/lib/agy-bridge
+ExecStart=/usr/bin/python3 /opt/agy-bridge/bridge_service.py --config /etc/agy-bridge/config.json
+RuntimeDirectory=agy-bridge-host
+RuntimeDirectoryMode=0700
+BindPaths=/srv/hermes-data/run/agy-bridge:/run/agy-bridge-host/socketdir
+ProtectSystem=strict
+ReadWritePaths=/home/bridge-worker/.gemini /var/lib/agy-bridge /srv/hermes-data/run/agy-bridge /run/agy-bridge-host/socketdir
+InaccessiblePaths=/home/bridge-worker/discord-bot
+PrivateTmp=yes
+NoNewPrivileges=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+KillMode=control-group
+TimeoutStopSec=15
+Restart=on-failure
+RestartSec=5
+TasksMax=128
+MemoryMax=2G
+LimitCORE=0
+
+[Install]
+WantedBy=multi-user.target

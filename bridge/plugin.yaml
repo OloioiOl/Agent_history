@@ -1,0 +1,5 @@
+name: bulk-analyze
+version: 0.1.0
+description: "허용된 원문을 agy 브리지로 전달하고 검증된 인용과 분석을 반환"
+provides_tools:
+  - bulk_analyze

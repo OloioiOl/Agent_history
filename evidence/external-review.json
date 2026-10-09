@@ -1,0 +1,25 @@
+{
+  "reported_date": "2026-10-08",
+  "source": "S7 reviewer summary relayed by user",
+  "evidence_level": "reported_not_independently_reproduced",
+  "environment_reported": "Linux VM, Python 3.10.12, temporary source copy outside the repository",
+  "reported_tests": {
+    "total": 31,
+    "passed": 30,
+    "failed": 1,
+    "failing_test": "test_async_client_cancellation",
+    "reported_reason": "asyncio.timeout unavailable on Python 3.10"
+  },
+  "missing_evidence": [
+    "full output"
+  ],
+  "supported_runtime": "Python >=3.11",
+  "counted_as_supported_linux_full_pass": false,
+  "doctest_materials": {
+    "mentioned_by_reviewer": true,
+    "files_obtained": false,
+    "executed_here": false
+  },
+  "command_reported": "PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest -v test_bridge test_result_contract (cwd: copy of bridge/)",
+  "source_hashes_reported": "matched evidence/manifest.json at run time and at follow-up review"
+}
