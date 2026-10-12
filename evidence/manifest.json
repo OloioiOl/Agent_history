@@ -1,10 +1,10 @@
 {
-  "as_of": "2026-10-08",
+  "as_of": "2026-10-11",
   "entries": [
     {
       "path": "bridge/bridge_core.py",
-      "sha256": "1239223b39628b77f609a403772fb35719b85def702cae0eb0b2044edb3bb737",
-      "origin": "S6 local source, unchanged"
+      "sha256": "42f3d034eca6b45ece58566fcf017f60fb3dc6bb3d01273c81bc1ec6c13421f5",
+      "origin": "S8 prompt-limit wording only; host applied and Linux fake source verified"
     },
     {
       "path": "bridge/bridge_service.py",
@@ -51,5 +51,6 @@
       "sha256": "037ff8b52464572f88c982cd8c59361f3e04781851180e15a2b0e54a9c324bac",
       "origin": "new offline regression for this repository; no installed Hermes dependency"
     }
-  ]
+  ],
+  "previous_manifest": "evidence/manifest-20261008.json"
 }

@@ -1,0 +1,35 @@
+{
+  "status": "prepared_not_sent",
+  "source_sha256": "19edc1339e2fba0d247e0cbe3f4ada45806beeeffcfd580b0d27657847f32958",
+  "source_metadata_sha256": "7c3ad6edc24baf57c049fbce74a77bf324e806469e76da78e437e558761cb955",
+  "original_lines": [
+    454,
+    598
+  ],
+  "timestamp_seconds": [
+    1623.76,
+    2058.72
+  ],
+  "normalization": "contiguous original caption lines; UTF-8 LF with trailing LF; no text correction",
+  "input_filename": "lecture-1008-api02-2e0b00b282d3.txt",
+  "input_bytes": 7147,
+  "input_lines": 145,
+  "input_sha256": "2e0b00b282d3805da957aab4c228791e0a85c44fcfbf5d8e6b22ebd45e06ce7d",
+  "question_sha256": "26b5ee2eb3ad0fb46f230e47d56c0cc0a0ef4f2f69996f3d305b5556e5599076",
+  "question_file_sha256": "d1acbc0c8a6c8aa3398dd41d5381757135bb463ef9754821029f42b8581f7569",
+  "alias": "inbox/lecture-1008-api02-2e0b00b282d3.txt",
+  "planned_agy_cli_calls": 1,
+  "planned_model_alias": "flash",
+  "automatic_retry": false,
+  "external_model_calls": 0,
+  "server_changes": 0,
+  "upload_performed": false,
+  "human_quality_approved": false,
+  "permission_status": "local preparation authorized; external upload and model execution pending explicit scope approval",
+  "excluded": [
+    "157KB retest",
+    "reboot recovery",
+    "long-term stability",
+    "injection test"
+  ]
+}

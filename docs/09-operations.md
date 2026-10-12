@@ -26,7 +26,7 @@ systemctl is-active agy-bridge.service
 systemctl is-enabled agy-bridge.service
 ```
 
-컨테이너 running만으로 Discord connected를 판정하지 않는다. 설치본 gateway 상태 파일의 PID 신원과 platform 상태를 함께 봐야 한다. 이번 버전에서는 `gateway_state.json`을 사용했지만 후속 버전의 파일명·API는 확인해야 한다.
+컨테이너 running만으로 Discord connected를 판정하지 않는다. 설치본 gateway 상태 파일의 PID 신원과 platform 상태를 함께 봐야 한다. 이번 버전에서는 `gateway_state.json`을 사용했지만 후속 버전의 파일명·API는 확인해야 한다. 2026-10-11 진단에서 상태 파일의 `hermes_home` 필드가 없었으므로 단순 문자열 비교의 false를 경로 오류로 판정하지 않았다. 설치본 API의 PID 시작 시각·홈 범위 검사를 함께 확인했다.
 
 ## 변경과 복구 원칙
 
@@ -44,4 +44,6 @@ systemctl is-enabled agy-bridge.service
 
 ## 다음 세션에 전달할 짧은 맥락
 
-> schema-r3 브리지와 JSON 문자열 반환 수정이 적용됐고, 운영 Discord PATH_DENIED 및 systemd enabled/active를 확인했다. 16KB 실제 분석은 과거 핸드오프의 성공이고, 157KB 실패는 아직 실패다. 정상 문서를 운영 Discord로 분석해 저장 결과와 최종 답변의 보존을 비교하는 시험이 남아 있다. 과거 설치 스크립트나 실패한 모델 호출을 무조건 반복하지 않는다.
+> 2026-10-11 프로젝트 문서 5,807바이트의 첫 시도는 근거 수 초과로 실패했다. 호스트 브리지의 프롬프트에 기존 상한을 명시한 뒤 두 번째 시도에서 정상 경로와 인용 14개 보존을 확인했다. Linux Python 3.12.3 fake 시험은 31개 모두 통과했다. 157KB 실패·대표 강의 문서 품질·재부팅 복구는 미해결/미검증으로 유지한다. 완료된 모델 호출과 옛 설치 스크립트를 반복하지 않는다.
+
+현재 호스트 core는 `42f3d034eca6b45ece58566fcf017f60fb3dc6bb3d01273c81bc1ec6c13421f5`다. 클라이언트 플러그인의 core는 기존 `1239223b39628b77f609a403772fb35719b85def702cae0eb0b2044edb3bb737`를 유지한다. 차이는 호스트가 사용하는 프롬프트 문구이며 스키마·검증 코드는 같다. 따라서 과거 진단의 호스트 해시 고정값으로 재검사하면 불일치가 나는 것이 예상된다. 적용했던 스크립트를 그대로 반복하지 말고 현재 해시·백업을 먼저 확인한다.

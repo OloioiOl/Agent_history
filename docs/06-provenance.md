@@ -10,6 +10,7 @@
 | S4 | HANDOFF_2026-10-08.ko.md | schema-r3, 실제 모델 3회, 실패 및 fake/오프라인 시험 범위 |
 | S5 | 2026-10-08 이번 대화의 사용자 제공 서버·Discord 출력 | 활성화, 복구/재적용, 반환 계약 수정, PATH_DENIED, enabled/active |
 | S6 | 당시 로컬 브리지 소스 및 이번 반환 계약 수정 코드 | bridge/ 소스 스냅샷과 해시 목록 |
+| S8 | 2026-10-11 사용자 실행 진단·Discord 메시지·Linux 전체 시험 출력 | 문서 2회 시도, 인용 보존, 프롬프트 보강, Linux 31개 통과 |
 
 전체 원본 대화, 비공개 메모리, 인증 설정, 서버 로그 원문은 이 저장소에 포함하지 않는다. 증거 목록은 해당 자료에서 만든 축약 기록이며 자동 측정 원본처럼 표시하지 않는다. 역사적 provider 정보는 당시 판단으로만 소개한다.
 
@@ -24,7 +25,7 @@
 
 bridge_core, bridge_service, safe_files, bulk_analyze_client, fake_agy, test_bridge, replay, plugin manifest는 로컬 작업 산출물에서 복사했다. `__init__.py`에는 서버에서 확인된 JSON 문자열 반환 수정과 동일한 변환을 적용했다. 이 저장소를 만드는 과정에서 원격 서버 코드를 다시 수집한 것은 아니다.
 
-`test_result_contract.py`는 저장소에 맞게 새로 추가한 로컬 회귀 검사다. 실제 설치된 Hermes dispatcher 검증을 대체하지 않는다. 파일 해시는 [manifest.json](../evidence/manifest.json)에 남긴다.
+`test_result_contract.py`는 저장소에 맞게 새로 추가한 로컬 회귀 검사다. 실제 설치된 Hermes dispatcher 검증을 대체하지 않는다. 현재 파일 해시는 [manifest.json](../evidence/manifest.json), 초기 스냅샷은 [manifest-20261008.json](../evidence/manifest-20261008.json)에 남긴다.
 
 기존 독립 Discord 봇 전체 코드, Hermes 본체, agy CLI 바이너리는 복제하지 않는다. 이 프로젝트의 코드 스냅샷을 upstream 프로젝트 전체에 대한 저작권·라이선스 주장으로 해석하지 않는다.
 
@@ -34,4 +35,8 @@ bridge_core, bridge_service, safe_files, bulk_analyze_client, fake_agy, test_bri
 - S7: 사용자가 전달한 검증자의 평가문. Linux Python 3.10 시험은 원본 로그가 없는 보고로, doctest는 실제 자료 미확보로 기록했다.
 - 유닛 예시는 S6와 같은 작업 산출물의 보존된 systemd 유닛을 바탕으로 계정·경로를 일반화했다. 운영 서버에서 다시 추출하지 않았으며 예시를 설치하지 않았다.
 - 위협 모델의 코드 위치·키·시험명은 포함된 소스와 대조했다. SO_PEERCRED와 open 동작의 설명에는 Linux man-pages를 참고하고 해당 문단에 링크했다. API 설명과 이 환경에서의 실제 방어 효과 검증은 별개다.
-- 당시 소스/시험 10개 파일의 기존 manifest 해시는 유지한다. 추가 예시 해시와 문서 검사는 `evidence/review-checks.json`에 기록한다.
+- 당시 소스/시험 10개 파일의 manifest는 `evidence/manifest-20261008.json`으로 보존했다. 추가 예시 해시와 문서 검사는 `evidence/review-checks.json`에 기록한다.
+
+## 후속 반영 — 2026-10-11
+
+호스트에 적용하고 Linux 전체 fake 시험으로 확인한 프롬프트 문구 변경을 `bridge/bridge_core.py`에 반영했다. 스키마와 검증 로직은 동일하다. 클라이언트 설치본 core는 과거 해시를 유지한다. 사용자 제공 전체 테스트 출력을 비식별 발췌본으로 보존했고, 정상 문서 입력 고정본과 축약 결과도 추가했다. raw 모델 로그·세션 DB·서버별 적용 스크립트는 공개 추적 파일에 넣지 않았다. 의미 검토는 AI 보조 검토이며 독립적인 사람의 승인으로 표시하지 않는다.

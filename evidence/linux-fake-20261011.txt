@@ -1,0 +1,78 @@
+User-supplied unittest output; shell prompt, connection details and runtime paths omitted.
+
+test_cleanup_has_its_own_deadline (test_bridge.CleanupRegression.test_cleanup_has_its_own_deadline) ... ok
+test_reap_requires_both_pipes_drained (test_bridge.CleanupRegression.test_reap_requires_both_pipes_drained) ... ok
+test_async_client_cancellation (test_bridge.LinuxIntegration.test_async_client_cancellation) ... ok
+test_cancel_kills_group_and_releases_slot (test_bridge.LinuxIntegration.test_cancel_kills_group_and_releases_slot) ... ok
+test_concurrency_one (test_bridge.LinuxIntegration.test_concurrency_one) ... ok
+test_large_inline_payload (test_bridge.LinuxIntegration.test_large_inline_payload) ... ok
+test_live_denials_abort_before_timeout_and_kill_children (test_bridge.LinuxIntegration.test_live_denials_abort_before_timeout_and_kill_children) ...   CASE live_denied_stdout: starting
+  CASE live_denied_stdout: passed
+  CASE live_denied_stderr: starting
+  CASE live_denied_stderr: passed
+  CASE live_external_tool: starting
+  CASE live_external_tool: passed
+  CASE live_step_error: starting
+  CASE live_step_error: passed
+  CASE live_empty_finish: starting
+  CASE live_empty_finish: passed
+ok
+test_oversized_frame (test_bridge.LinuxIntegration.test_oversized_frame) ... ok
+test_path_boundaries (test_bridge.LinuxIntegration.test_path_boundaries) ... ok
+test_peer_denial (test_bridge.LinuxIntegration.test_peer_denial) ... ok
+test_success_and_failure_matrix (test_bridge.LinuxIntegration.test_success_and_failure_matrix) ...   CASE success: starting
+  CASE success: passed
+  CASE empty: starting
+  CASE empty: passed
+  CASE invalid_json: starting
+  CASE invalid_json: passed
+  CASE denied: starting
+  CASE denied: passed
+  CASE denied_stderr: starting
+  CASE denied_stderr: passed
+  CASE stdout_limit: starting
+  CASE stdout_limit: passed
+  CASE stderr_limit: starting
+  CASE stderr_limit: passed
+  CASE timeout: starting
+  CASE timeout: passed
+  CASE duplicate_result: starting
+  CASE duplicate_result: passed
+  CASE bad_quote: starting
+  CASE bad_quote: passed
+  CASE bad_type: starting
+  CASE bad_type: passed
+  CASE no_structured: starting
+  CASE no_structured: passed
+  CASE status: starting
+  CASE status: passed
+  CASE exit: starting
+  CASE exit: passed
+  CASE empty_findings: starting
+  CASE empty_findings: passed
+ok
+test_timeout_kills_descendants (test_bridge.LinuxIntegration.test_timeout_kills_descendants) ... ok
+test_bad_evidence_never_silently_removed (test_bridge.Validation.test_bad_evidence_never_silently_removed) ... ok
+test_duplicate_keys_and_nonfinite (test_bridge.Validation.test_duplicate_keys_and_nonfinite) ... ok
+test_empty_submission_is_allowed_but_never_success (test_bridge.Validation.test_empty_submission_is_allowed_but_never_success) ... ok
+test_error_step_and_empty_finish_fail_before_final_result (test_bridge.Validation.test_error_step_and_empty_finish_fail_before_final_result) ... ok
+test_external_tool_metadata_is_rejected_live_and_offline (test_bridge.Validation.test_external_tool_metadata_is_rejected_live_and_offline) ... ok
+test_live_guard_chunked_events_and_stderr (test_bridge.Validation.test_live_guard_chunked_events_and_stderr) ... ok
+test_live_guard_final_line_without_newline (test_bridge.Validation.test_live_guard_final_line_without_newline) ... ok
+test_live_guard_text_is_not_a_tool_event (test_bridge.Validation.test_live_guard_text_is_not_a_tool_event) ... ok
+test_newline_normalization (test_bridge.Validation.test_newline_normalization) ... ok
+test_plugin_registration_contract (test_bridge.Validation.test_plugin_registration_contract) ... ok
+test_reply_is_not_truncated (test_bridge.Validation.test_reply_is_not_truncated) ... ok
+test_request_validation (test_bridge.Validation.test_request_validation) ... ok
+test_result_count_denial_and_malformed (test_bridge.Validation.test_result_count_denial_and_malformed) ... ok
+test_tool_catalog_and_mentions_do_not_trigger_policy (test_bridge.Validation.test_tool_catalog_and_mentions_do_not_trigger_policy) ... ok
+test_valid_and_no_response_fallback (test_bridge.Validation.test_valid_and_no_response_fallback) ... ok
+test_bad_arguments_do_not_read_config (test_result_contract.ResultContract.test_bad_arguments_do_not_read_config) ... ok
+test_config_io_error_is_json_text (test_result_contract.ResultContract.test_config_io_error_is_json_text) ... ok
+test_error_result_is_json_text (test_result_contract.ResultContract.test_error_result_is_json_text) ... ok
+test_success_preserves_unicode_and_quotes (test_result_contract.ResultContract.test_success_preserves_unicode_and_quotes) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 3.862s
+
+OK

@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-11",
+  "scope": "local static checks after documentation and tested-source synchronization",
+  "manifest_entries_verified": 10,
+  "matches_user_run_linux_package": true,
+  "historical_manifest_preserved": true,
+  "frozen_input_hash_matches": true,
+  "relative_markdown_links_and_explicit_anchors": 51,
+  "json_and_python_syntax": "pass",
+  "only_runtime_change": "prompt wording; AST outside prompt unchanged",
+  "bounded_publication_pattern_scan": {
+    "hits": [],
+    "not_proof_of_all_secret_absence": true
+  },
+  "model_calls": 0,
+  "runtime_tests_repeated": false,
+  "reason": "exact source hashes already covered by user-run Linux 31/31 test",
+  "github_visibility_read_only_verified": "PRIVATE",
+  "committed_or_pushed": false
+}

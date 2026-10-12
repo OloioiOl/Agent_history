@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-11",
+  "source": "S8 user-run server diagnostics and user-provided Discord messages; local comparison by Codex",
+  "input": {
+    "path": "evidence/normal-document-source-20261011.txt",
+    "bytes": 5807,
+    "sha256": "4a1d18958b0f6ad9008374b7abe5522f470037d5f75e4ba893a53dec7fb611a3",
+    "origin": "frozen 2026-10-08 validation document; historical claims evaluated as of that document"
+  },
+  "question": "문서에 기록된 시점을 기준으로 다음 네 항목의 확인 결과와 입증되지 않은 범위를 각각 설명해 주세요: (1) 16KB·157KB 실제 분석, (2) 운영 Discord PATH_DENIED 및 systemd enabled/active, (3) Windows 로컬 시험과 외부 검증자의 Linux Python 3.10 시험, (4) total tokens 합계 308,039의 의미. 각 항목에 원문 줄 범위와 정확한 인용을 붙이고, 과거 기록을 현재 상태나 정상 분석 전체 경로의 성공으로 바꾸어 설명하지 마세요.",
+  "question_sha256": "8f2bd0cd8cd7a7eb315de4d903e28ecaa1786a40d3aa084d13fe47d02531c268",
+  "model_alias": "flash",
+  "attempts": [
+    {
+      "label": "before_prompt_clarification",
+      "status": "failed",
+      "error": "AGY_TOOL_ERROR",
+      "cause": "second finding evidence count 5 exceeds maxItems 3",
+      "evidence_counts": [
+        3,
+        5,
+        3,
+        2
+      ],
+      "individual_quotes_match": 13,
+      "structured_result_received": false,
+      "reported_usage": {
+        "input_tokens": 15054,
+        "output_tokens": 19287,
+        "thinking_tokens": 17091,
+        "total_tokens": 34341
+      },
+      "usage_source": "one agent_response event"
+    },
+    {
+      "label": "after_prompt_clarification",
+      "status": "passed_with_bounded_semantic_review",
+      "findings": 6,
+      "evidence_counts": [
+        3,
+        3,
+        3,
+        1,
+        2,
+        2
+      ],
+      "quotes_match": 14,
+      "process_exit": 0,
+      "capture_complete": true,
+      "cleanup_error": null,
+      "reported_usage": {
+        "input_tokens": 15169,
+        "output_tokens": 29427,
+        "thinking_tokens": 27210,
+        "total_tokens": 44596,
+        "counted_once": true,
+        "reason": "same usage repeated in step_update and result; not cost/quota; excludes Hermes usage"
+      },
+      "core_sha256": "42f3d034eca6b45ece58566fcf017f60fb3dc6bb3d01273c81bc1ec6c13421f5"
+    }
+  ],
+  "comparison": {
+    "input_and_question_match_both_attempts": true,
+    "schema_unchanged": true,
+    "saved_reply_equals_actual_tool_json": true,
+    "tool_reply_equals_stored_final_evidence": true,
+    "ordered_final_quotes_match": 14,
+    "normalization": "Markdown list indentation only",
+    "discord_delivery_evidence": "user-pasted three message chunks; not direct Discord API byte comparison"
+  },
+  "semantic_review": {
+    "reviewer": "Codex source-based review; not independent human approval",
+    "main_four_topics": "no material contradiction found; historical status boundaries preserved",
+    "citation_coverage_caveat": "Finding 6 includes per-run totals 17,921 / 266,291 / 23,827; its selected evidence cites header and aggregate paragraph, while breakdown is elsewhere in source lines 22-24. Correct in source but claim-to-selected-evidence support is incomplete. Final Hermes answer omits this breakdown."
+  },
+  "call_count_boundary": "two user-initiated attempts with two saved result IDs; no claim to full-session or internal model-step count",
+  "not_claimed": [
+    "independent human quality approval",
+    "representative lecture-document quality",
+    "large-input success",
+    "reboot recovery",
+    "long-term reliability",
+    "prompt change guarantees future compliance"
+  ],
+  "raw_model_logs_published": false
+}
